@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
 Ferramenta para consulta de informações patrimoniais em fontes públicas
-Desenvolvido para uso em Kali Linux
-Autor: Claude Assistant
+Autor: Cyberrobot
 Versão: 2.0 - Integração com múltiplas fontes governamentais
 """
 
@@ -18,7 +17,7 @@ import re
 from urllib.parse import urlencode
 
 
-class PatrimonioConsultor:
+class MrHolmesCorp:
     def __init__(self):
         self.session = requests.Session()
         self.session.headers.update({
@@ -379,7 +378,7 @@ class PatrimonioConsultor:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
         if not arquivo:
-            arquivo = f"relatorio_patrimonio_{timestamp}.json"
+            arquivo = f"relatorio_mr_holmescorp_{timestamp}.json"
 
         with open(arquivo, 'w', encoding='utf-8') as f:
             json.dump(dados, f, ensure_ascii=False, indent=2)
@@ -461,7 +460,7 @@ class PatrimonioConsultor:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Consultor de Patrimônios em Fontes Públicas v2.0')
+    parser = argparse.ArgumentParser(description='Mr.HolmesCorp - Consultor de Informações em Fontes Públicas v2.0')
     parser.add_argument('identificador', help='CNPJ, CPF, Nome, RG ou Placa para consulta')
     parser.add_argument('--tipo', choices=['cnpj', 'cpf', 'nome', 'rg', 'placa'], required=True,
                         help='Tipo de consulta (cnpj, cpf, nome, rg, placa)')
@@ -471,10 +470,10 @@ def main():
 
     args = parser.parse_args()
 
-    consultor = PatrimonioConsultor()
+    consultor = MrHolmesCorpConsultor()
 
     print("=" * 80)
-    print("CONSULTOR DE PATRIMÔNIOS PÚBLICOS v2.0")
+    print("MR.HOLMESCORP - CONSULTOR DE INFORMAÇÕES PÚBLICAS v2.0")
     print("Integração com múltiplas fontes governamentais")
     print("=" * 80)
 
