@@ -8,7 +8,7 @@
 
 ## 📋 Descrição
 
-O **Patrimônio Consultor Brasil** é uma ferramenta desenvolvida especificamente para profissionais de segurança, investigadores e pesquisadores que necessitam consultar informações patrimoniais e pessoais em fontes públicas governamentais brasileiras.
+A **Mr.HolmesCorp** é uma ferramenta desenvolvida especificamente para profissionais de segurança, investigadores e pesquisadores que necessitam consultar informações patrimoniais e pessoais em fontes públicas governamentais brasileiras.
 
 A ferramenta automatiza consultas em múltiplas bases de dados oficiais, fornecendo um relatório consolidado das informações encontradas.
 
@@ -79,7 +79,7 @@ patrimonio-consultor --help
 
 ### Sintaxe Básica
 ```bash
-python3 patrimonio_consultor.py <IDENTIFICADOR> --tipo <TIPO> [OPÇÕES]
+python3 Mr.HolmesCorp.py <IDENTIFICADOR> --tipo <TIPO> [OPÇÕES]
 ```
 
 ### Exemplos Práticos
@@ -87,43 +87,43 @@ python3 patrimonio_consultor.py <IDENTIFICADOR> --tipo <TIPO> [OPÇÕES]
 #### 🏢 Consultar CNPJ
 ```bash
 # Consulta básica de CNPJ
-python3 patrimonio_consultor.py 11222333000181 --tipo cnpj
+python3 Mr.HolmesCorp.py 11222333000181 --tipo cnpj
 
 # Consulta com relatório personalizado
-python3 patrimonio_consultor.py 11222333000181 --tipo cnpj -o empresa_relatorio.json
+python3 Mr.HolmesCorp.py 11222333000181 --tipo cnpj -o empresa_relatorio.json
 
 # Consulta verbose (detalhada)
-python3 patrimonio_consultor.py 11222333000181 --tipo cnpj -v
+python3 Mr.HolmesCorp.py 11222333000181 --tipo cnpj -v
 ```
 
 #### 👤 Consultar CPF
 ```bash
 # Consulta de CPF (benefícios, valores a receber, etc.)
-python3 patrimonio_consultor.py 12345678901 --tipo cpf
+python3 Mr.HolmesCorp.py 12345678901 --tipo cpf
 
 # Salvar em arquivo específico
-python3 patrimonio_consultor.py 12345678901 --tipo cpf -o pessoa_relatorio.json
+python3 Mr.HolmesCorp.py 12345678901 --tipo cpf -o pessoa_relatorio.json
 ```
 
 #### 🔍 Consultar por Nome
 ```bash
 # Busca por nome em registros públicos
-python3 patrimonio_consultor.py "João Silva Santos" --tipo nome
+python3 Mr.HolmesCorp.py "João Silva Santos" --tipo nome
 ```
 
 #### 🆔 Consultar RG (São Paulo)
 ```bash
-python3 patrimonio_consultor.py 123456789 --tipo rg
+python3 Mr.HolmesCorp.py 123456789 --tipo rg
 ```
 
 #### 🚗 Consultar Placa Veicular
 ```bash
-python3 patrimonio_consultor.py ABC1234 --tipo placa
+python3 Mr.HolmesCorp.py ABC1234 --tipo placa
 ```
 
 #### 📋 Listar Todas as Fontes
 ```bash
-python3 patrimonio_consultor.py dummy --tipo cnpj --listar-fontes
+python3 Mr.HolmesCorp.py dummy --tipo cnpj --listar-fontes
 ```
 
 ## 📁 Estrutura dos Relatórios
@@ -168,7 +168,7 @@ Os relatórios são gerados em formato JSON com a seguinte estrutura:
 ## 🔧 Configuração Avançada
 
 ### Personalizar Timeouts
-Edite o arquivo `patrimonio_consultor.py` e modifique:
+Edite o arquivo `Mr.HolmesCorp.py.py` e modifique:
 ```python
 response = self.session.get(url, timeout=30)  # Alterar valor conforme necessário
 ```
@@ -207,16 +207,16 @@ pip3 install --force-reinstall requests
 ping google.com
 
 # Testar com verbose para debug
-python3 patrimonio_consultor.py 11222333000181 --tipo cnpj -v
+python3 Mr.HolmesCorp.py 11222333000181 --tipo cnpj -v
 ```
 
 #### Permissões Negadas
 ```bash
 # Verificar permissões do arquivo
-ls -la patrimonio_consultor.py
+ls -la Mr.HolmesCorp.py
 
 # Corrigir permissões
-chmod +x patrimonio_consultor.py
+chmod +x Mr.HolmesCorp.py
 ```
 
 ## 📝 Logs e Debug
