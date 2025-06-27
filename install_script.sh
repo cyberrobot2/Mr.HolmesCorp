@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Script de instalação automática para Kali Linux
-# Patrimônio Consultor Brasil v2.0
+# Mr.HolmesCorp.py v2.0
 
 echo "=============================================="
-echo "PATRIMÔNIO CONSULTOR BRASIL - INSTALAÇÃO"
+echo "MR.HOLMESCORP" - INSTALAÇÃO"
 echo "=============================================="
 
 # Cores para output
@@ -114,11 +114,11 @@ install_python_deps() {
 setup_permissions() {
     log_info "Configurando permissões..."
     
-    if [ -f "patrimonio_consultor.py" ]; then
+    if [ -f "Mr.HolmesCorp.py.py" ]; then
         chmod +x patrimonio_consultor.py
         log_success "Permissões configuradas para patrimonio_consultor.py"
     else
-        log_error "Arquivo patrimonio_consultor.py não encontrado"
+        log_error "Arquivo Mr.HolmesCorp.py não encontrado"
         exit 1
     fi
 }
@@ -129,10 +129,10 @@ create_global_link() {
     case "$choice" in 
         y|Y )
             log_info "Criando link simbólico global..."
-            sudo ln -sf "$(pwd)/patrimonio_consultor.py" /usr/local/bin/patrimonio-consultor
+            sudo ln -sf "$(pwd)/Mr.HolmesCorp.py" /usr/local/bin/patrimonio-consultor
             if [ $? -eq 0 ]; then
                 log_success "Link global criado: patrimonio-consultor"
-                echo -e "${GREEN}Agora você pode usar: ${YELLOW}patrimonio-consultor --help${NC}"
+                echo -e "${GREEN}Agora você pode usar: ${YELLOW}Mr.HolmesCorp --help${NC}"
             else
                 log_error "Erro ao criar link global"
             fi
@@ -166,29 +166,29 @@ show_usage_info() {
     echo -e "${YELLOW}EXEMPLOS DE USO:${NC}"
     echo ""
     echo -e "${BLUE}# Consultar CNPJ:${NC}"
-    echo "python3 patrimonio_consultor.py 11222333000181 --tipo cnpj"
+    echo "python3 Mr.HolmesCorp.py 11222333000181 --tipo cnpj"
     echo ""
     echo -e "${BLUE}# Consultar CPF:${NC}"
-    echo "python3 patrimonio_consultor.py 12345678901 --tipo cpf"
+    echo "python3 Mr.HolmesCorp.py 12345678901 --tipo cpf"
     echo ""
     echo -e "${BLUE}# Consultar com relatório personalizado:${NC}"
-    echo "python3 patrimonio_consultor.py 11222333000181 --tipo cnpj -o relatorio.json"
+    echo "python3 Mr.HolmesCorp.py 11222333000181 --tipo cnpj -o relatorio.json"
     echo ""
     echo -e "${BLUE}# Modo verbose:${NC}"
-    echo "python3 patrimonio_consultor.py 11222333000181 --tipo cnpj -v"
+    echo "python3 Mr.HolmesCorp.py 11222333000181 --tipo cnpj -v"
     echo ""
     echo -e "${BLUE}# Listar todas as fontes:${NC}"
-    echo "python3 patrimonio_consultor.py dummy --tipo cnpj --listar-fontes"
+    echo "python3 Mr.HolmesCorp.py dummy --tipo cnpj --listar-fontes"
     echo ""
     
     if [ -L "/usr/local/bin/patrimonio-consultor" ]; then
         echo -e "${YELLOW}COMANDO GLOBAL DISPONÍVEL:${NC}"
-        echo "patrimonio-consultor --help"
+        echo "Mr.HolmesCorp --help"
         echo ""
     fi
     
     echo -e "${YELLOW}DOCUMENTAÇÃO COMPLETA:${NC}"
-    echo "https://github.com/SEU_USUARIO/patrimonio-consultor-brasil"
+    echo "https://github.com/SEU_USUARIO/Mr.HolmesCorp"
     echo ""
     echo -e "${GREEN}Bom uso da ferramenta!${NC}"
 }
