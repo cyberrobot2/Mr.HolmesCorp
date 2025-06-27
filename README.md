@@ -1,4 +1,4 @@
-# 🔍 Patrimônio Consultor Brasil
+# Mr.HolmesCorp
 
 **Ferramenta OSINT para consulta de informações patrimoniais em fontes públicas brasileiras**
 
@@ -56,14 +56,14 @@ sudo apt install python3 python3-pip git -y
 ### Instalação
 ```bash
 # Clonar o repositório
-git clone https://github.com/SEU_USUARIO/patrimonio-consultor-brasil.git
-cd patrimonio-consultor-brasil
+git clone https://github.com/cyberrobot2/Mr.HolmesCorp.git
+cd Mr.HolmesCorp.git
 
 # Instalar dependências
 pip3 install -r requirements.txt
 
 # Tornar o script executável
-chmod +x patrimonio_consultor.py
+chmod +x Mr.HolmesCorp.py
 ```
 
 ### Instalação Global (Opcional)
